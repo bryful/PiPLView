@@ -8,8 +8,135 @@ using System.Threading.Tasks;
 using System.IO;
 namespace PiPLView
 {
+
+
+
 	public class PiPLFile
 	{
+		public int [] VerInfo = new int[]
+        {
+			1106,
+			1201,
+			1202,
+			1211,
+			1212,
+			1213,
+			1214,
+			1300,
+			13
+
+        }
+
+/*
+#define PF_AE220_PLUG_IN_VERSION			13	// manually set for SDK changes to allow more than 32 max threads for PF_Iterate
+#define PF_AE220_PLUG_IN_SUBVERS			27	// manually set for SDK changes to allow more than 32 max threads for PF_Iterate
+
+#define PF_AE184_PLUG_IN_VERSION			13	// manually set for mid-cycle SDK drop
+#define PF_AE184_PLUG_IN_SUBVERS			26	// manually set for mid-cycle SDK drop
+
+#define PF_AE182_PLUG_IN_VERSION			13	// manually set for mid-cycle SDK drop
+#define PF_AE182_PLUG_IN_SUBVERS			25	// manually set for mid-cycle SDK drop
+
+#define PF_AE180_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE180_PLUG_IN_SUBVERS			24	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE177_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE177_PLUG_IN_SUBVERS			23	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE176_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE176_PLUG_IN_SUBVERS			22	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE175_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE175_PLUG_IN_SUBVERS			21	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE171_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE171_PLUG_IN_SUBVERS			20	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE170_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE170_PLUG_IN_SUBVERS			18	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE161_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE161_PLUG_IN_SUBVERS			17	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE160_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE160_PLUG_IN_SUBVERS			16	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE151_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE151_PLUG_IN_SUBVERS			15	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE150_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE150_PLUG_IN_SUBVERS			15	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE142_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE142_PLUG_IN_SUBVERS			14	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE140_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE140_PLUG_IN_SUBVERS			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE138_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE138_PLUG_IN_SUBVERS			11	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+// AE137 is same plugin version as AE136, below
+
+#define PF_AE136_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE136_PLUG_IN_SUBVERS			10	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+#define PF_AE135_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+#define PF_AE135_PLUG_IN_SUBVERS			9	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit is okay
+
+// AE131 and AE132 are the same plugin version as AE130, below
+
+#define PF_AE130_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit okay
+#define PF_AE130_PLUG_IN_SUBVERS			7	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit okay
+
+#define PF_AE122_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit okay
+#define PF_AE122_PLUG_IN_SUBVERS			6	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit okay
+
+#define PF_AE121_PLUG_IN_VERSION			13	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit okay
+#define PF_AE121_PLUG_IN_SUBVERS			5	// auto-set by prep_codeline_for_release.py, adjust comment if manually edit okay
+
+#define PF_AE120_PLUG_IN_VERSION			13
+#define PF_AE120_PLUG_IN_SUBVERS			4
+
+//CS6.0.1
+//Plugins have to make dummy checkout (hack) to fix W3163764 in CS6. The bug has been fixed in CS6.0.1 so increase SDK minor version 
+//so that plugins can constrain the hack only for CS6.
+#define PF_AE1101_PLUG_IN_VERSION			13
+#define PF_AE1101_PLUG_IN_SUBVERS           3
+
+#define PF_AE110_PLUG_IN_VERSION			13
+#define PF_AE110_PLUG_IN_SUBVERS			2
+
+#define PF_AE105_PLUG_IN_VERSION			13
+#define PF_AE105_PLUG_IN_SUBVERS			1
+
+#define PF_AE100_PLUG_IN_VERSION			13
+#define PF_AE100_PLUG_IN_SUBVERS			0
+
+#define PF_AE90_PLUG_IN_VERSION				12
+#define PF_AE90_PLUG_IN_SUBVERS				14
+
+#define PF_AE80_PLUG_IN_VERSION				12
+#define PF_AE80_PLUG_IN_SUBVERS				13
+
+#define PF_AE70_PLUG_IN_VERSION				12
+#define PF_AE70_PLUG_IN_SUBVERS				12
+
+#define PF_AE65_PLUG_IN_VERSION				12
+#define PF_AE65_PLUG_IN_SUBVERS				11
+
+#define PF_AE41_PLUG_IN_VERSION				12
+#define PF_AE41_PLUG_IN_SUBVERS				2
+
+#define PF_AE40_PLUG_IN_VERSION				12
+#define PF_AE40_PLUG_IN_SUBVERS				1
+
+#define PF_AE31_PLUG_IN_VERSION				11
+#define PF_AE31_PLUG_IN_SUBVERS				6
+#define PF_AE31_PLUG_IN_SUBVERS_STRICTIFY	8
+		*/
+
+
 		private byte[] PiPL_BYTE = new byte[] { 0x50, 0x00, 0x49, 0x00, 0x50, 0x00, 0x4C, 0x00 };
 		private byte[] PiPL_END = new byte[] { 0x3C, 0x3F, 0x78, 0x6D, 0x6C, 0x20 };
 
