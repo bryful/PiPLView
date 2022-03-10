@@ -91,6 +91,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AEoutflags.cs" />
+    <Compile Include="AEVersion.cs" />
     <Compile Include="AppInfoDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +142,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AE_Effect.h" />
     <Content Include="Skelton.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

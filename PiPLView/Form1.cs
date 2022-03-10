@@ -14,7 +14,7 @@ using System.Windows.Forms;
 /// <summary>
 /// 基本となるアプリのスケルトン
 /// </summary>
-namespace PiPLView
+namespace PiPLInfo
 {
 	public partial class Form1 : Form
 	{
