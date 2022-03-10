@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{563509E1-9BC3-4CBB-B248-46460826C759}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PiPLView</RootNamespace>
-    <AssemblyName>PiPLView</AssemblyName>
+    <RootNamespace>PiPLInfo</RootNamespace>
+    <AssemblyName>PiPLInfo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

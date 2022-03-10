@@ -57,7 +57,7 @@ namespace PiPLInfo
 			ret += String.Format("MAJOR_VERSION:{0}\r\n",MAJOR_VERSION);
 			ret += String.Format("MINOR_VERSION:{0}\r\n", MINOR_VERSION);
 			ret += String.Format("BUG_VERSION:{0}\r\n", BUG_VERSION);
-			ret += "TAGE_VERSION:";
+			ret += "STAGE_VERSION:";
 			switch(STAGE_VERSION)
 			{
 				case 0: 
